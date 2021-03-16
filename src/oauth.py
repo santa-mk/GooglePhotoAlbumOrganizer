@@ -6,10 +6,9 @@ import os
 ## const variables
 api_url = "https://photoslibrary.googleapis.com/v1/mediaItems"
 scope = ["https://www.googleapis.com/auth/photoslibrary.readonly"]
-# credential_file_path="F:\Documents\git\GooglePhotoAlbumOrganizer\credential\credentials.json"
-credential_file_path = (
-    os.path.dirname(os.path.basename(__file__)) + "..\credential\credentials.json"
-)
+print("file : " + __file__)
+credential_file_path = os.path.dirname(__file__) + "/../credential/credentials.json"
+print("credential file paht : " + credential_file_path)
 
 
 def save_token(token):
